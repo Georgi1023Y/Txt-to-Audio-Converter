@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('static/7073608_3505699.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        /* Set all text color to black */
+        .text-black {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-5 text-black">Text to Speech Converter</h1>
+    <form method="POST" action="/convert" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="textfile" class="text-black">Upload a Text File (.txt):</label>
+            <input type="file" class="form-control-file" name="textfile" accept=".txt" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert to Speech</button>
+    </form>
+    <hr class="bg-black">
+    <h2 class="text-black">Converted MP3:</h2>
+    <audio controls>
+        <source src="" id="audioSource" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+</body>
+</html>
+
+
+
+
+
